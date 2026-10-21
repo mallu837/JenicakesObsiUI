@@ -29,12 +29,12 @@ local Toggles = {}
 local Options = {}
 local Tooltips = {}
 
-local BaseURL = "https://raw.githubusercontent.com/mallu837/JenicakesObsiUI/main/"
+local BaseURL = "https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/"
 local CustomImageManager = {}
 local CustomImageManagerAssets = {
     TransparencyTexture = {
         RobloxId = 139785960036434,
-        Path = "Jenicakes/assets/TransparencyTexture.png",
+        Path = "Obsidian/assets/TransparencyTexture.png",
         URL = BaseURL .. "assets/TransparencyTexture.png",
 
         Id = nil,
@@ -42,7 +42,7 @@ local CustomImageManagerAssets = {
 
     SaturationMap = {
         RobloxId = 4155801252,
-        Path = "Jenicakes/assets/SaturationMap.png",
+        Path = "Obsidian/assets/SaturationMap.png",
         URL = BaseURL .. "assets/SaturationMap.png",
 
         Id = nil,
@@ -50,7 +50,7 @@ local CustomImageManagerAssets = {
 
     LoadingIcon = {
         RobloxId = 97544096941083,
-        Path = "Jenicakes/assets/LoadingIcon.png",
+        Path = "Obsidian/assets/LoadingIcon.png",
         URL = BaseURL .. "assets/LoadingIcon.png",
 
         Id = nil,
@@ -58,7 +58,7 @@ local CustomImageManagerAssets = {
 
     CheckIcon = {
         RobloxId = 97682394690683,
-        Path = "Jenicakes/assets/CheckIcon.png",
+        Path = "Obsidian/assets/CheckIcon.png",
         URL = BaseURL .. "assets/CheckIcon.png",
 
         Id = nil,
@@ -102,7 +102,7 @@ do
 
         CustomImageManagerAssets[AssetName] = {
             RobloxId = RobloxAssetId,
-            Path = string.format("Jenicakes/custom_assets/%s", AssetName),
+            Path = string.format("Obsidian/custom_assets/%s", AssetName),
             URL = URL,
 
             Id = nil,
@@ -168,7 +168,7 @@ local Library = {
     DevicePlatform = nil,
     IsMobile = false,
 
-    --// Jenicakes Windows \\--
+    --// Obsidian Windows \\--
     ScreenGui = nil,
     Floats = nil,
     Overlay = nil,
@@ -288,7 +288,7 @@ local Library = {
         DarkColor = Color3.new(0, 0, 0),
         WhiteColor = Color3.new(1, 1, 1),
 
-        BackgroundImage = "https://raw.githubusercontent.com/mallu837/JenicakesObsiUI/main/assets/background.png"
+        BackgroundImage = ""
     },
 
     --// Registry \\--
@@ -420,7 +420,7 @@ local Templates = {
         CompactWidthActivation = 128,
 
         --// Background \\--
-        BackgroundImage = "https://raw.githubusercontent.com/mallu837/JenicakesObsiUI/main/assets/background.png",
+        BackgroundImage = "",
 
         --// Animations \\--
         Animations = {
@@ -1782,7 +1782,7 @@ local function SetAlwaysOnTop(Gui: ScreenGui, Enabled: boolean)
 end
 
 local ScreenGui = New("ScreenGui", {
-    Name = "Jenicakes",
+    Name = "Obsidian",
     DisplayOrder = 998,
     ResetOnSpawn = false,
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
@@ -1946,7 +1946,7 @@ end
 
 local OnlineFetchIcons, OnlineIcons = pcall(function()
     return (loadstring(
-        game:HttpGet("https://raw.githubusercontent.com/mallu837/JenicakesObsiUI/main/source.lua")
+        game:HttpGet("https://raw.githubusercontent.com/notpoiu/Molto/refs/heads/main/source.lua")
     ) :: () -> IconModule)()
 end)
 do
@@ -1956,7 +1956,7 @@ do
     else
         OnlineFetchIcons, OnlineIcons = pcall(function()
             return (loadstring(
-                game:HttpGet("https://raw.githubusercontent.com/mallu837/JenicakesObsiUI/main/source.lua")
+                game:HttpGet("https://raw.githubusercontent.com/notpoiu/lucide-roblox-direct/refs/heads/main/source.lua")
             ) :: () -> IconModule)()
         end)
         
@@ -2022,37 +2022,37 @@ end
 
 --// DEPRECATED
 function Library:ChangeCursorCrossColor(Color: Color3)
-    warn("Jenicakes:ChangeCursorCrossColor is deprecated, please use Jenicakes.Cursor:ChangeCrossColor instead.")
+    warn("Obsidian:ChangeCursorCrossColor is deprecated, please use Obsidian.Cursor:ChangeCrossColor instead.")
     Library.Cursor:ChangeCrossColor(Color)
 end
 
 --// DEPRECATED
 function Library:ResetCursorCross()
-    warn("Jenicakes:ResetCursorCross is deprecated, please use Jenicakes.Cursor:ResetCross instead.")
+    warn("Obsidian:ResetCursorCross is deprecated, please use Obsidian.Cursor:ResetCross instead.")
     Library.Cursor:ResetCross()
 end
 
 --// DEPRECATED
 function Library:ChangeCursorIcon(ImageId: string)
-    warn("Jenicakes:ChangeCursorIcon is deprecated, please use Jenicakes.Cursor:ChangeIcon instead.")
+    warn("Obsidian:ChangeCursorIcon is deprecated, please use Obsidian.Cursor:ChangeIcon instead.")
     Library.Cursor:ChangeIcon(ImageId)
 end
 
 --// DEPRECATED
 function Library:ChangeCursorIconColor(Color: Color3)
-    warn("Jenicakes:ChangeCursorIconColor is deprecated, please use Jenicakes.Cursor:ChangeIconColor instead.")
+    warn("Obsidian:ChangeCursorIconColor is deprecated, please use Obsidian.Cursor:ChangeIconColor instead.")
     Library.Cursor:ChangeIconColor(Color)
 end
 
 --// DEPRECATED
 function Library:ChangeCursorIconSize(Size: UDim2)
-    warn("Jenicakes:ChangeCursorIconSize is deprecated, please use Jenicakes.Cursor:ChangeIconSize instead.")
+    warn("Obsidian:ChangeCursorIconSize is deprecated, please use Obsidian.Cursor:ChangeIconSize instead.")
     Library.Cursor:ChangeIconSize(Size)
 end
 
 --// DEPRECATED
 function Library:ResetCursorIcon()
-    warn("Jenicakes:ResetCursorIcon is deprecated, please use Jenicakes.Cursor:ResetIcon instead.")
+    warn("Obsidian:ResetCursorIcon is deprecated, please use Obsidian.Cursor:ResetIcon instead.")
     Library.Cursor:ResetIcon()
 end
 
@@ -3163,7 +3163,7 @@ end
 
 --// Deprecated \\--
 function Library:MakeOutline(Frame: GuiObject, Corner: number?, ZIndex: number?)
-    warn("Jenicakes:MakeOutline is deprecated, please use Jenicakes:AddOutline instead.")
+    warn("Obsidian:MakeOutline is deprecated, please use Obsidian:AddOutline instead.")
     local Holder = New("Frame", {
         BackgroundColor3 = "DarkColor",
         Position = UDim2.fromOffset(-2, -2),
@@ -14672,7 +14672,7 @@ function Library:CreateLoading(LoadingInfo)
 
     --// ScreenGui \\--
     local ScreenGui = New("ScreenGui", {
-        Name = "JenicakesLoading",
+        Name = "ObsidianLoading",
         DisplayOrder = 999,
         ResetOnSpawn = false
     })
