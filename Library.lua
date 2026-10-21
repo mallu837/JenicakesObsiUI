@@ -420,7 +420,7 @@ local Templates = {
         CompactWidthActivation = 128,
 
         --// Background \\--
-        BackgroundImage = "",
+        BackgroundImage = "https://raw.githubusercontent.com/mallu837/JenicakesObsiUI/main/assets/background.png.txt",
 
         --// Animations \\--
         Animations = {
